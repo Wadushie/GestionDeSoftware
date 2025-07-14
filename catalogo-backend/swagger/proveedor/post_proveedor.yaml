@@ -1,0 +1,30 @@
+Crea un nuevo proveedor
+---
+tags:
+- "proveedor"
+responses:
+  200:
+    description: Se crea el proveedor
+  404:
+    description: Ya existe un proveedor con el id
+  500:
+    description: Ocurrio un error al crear el proveedor
+parameters:
+  - name: body
+    in: body
+    schema:
+      $ref: "#/definitions/ProveedorPost"
+definitions:
+    ProveedorPost:
+        type: "object"
+        properties:
+            nombre:
+                type: "string"
+            direccion:
+                type: "string"
+            telefono:
+                type: "string"
+        example:
+            nombre: Proveedor 1
+            direccion: Direccion prueba
+            telefono: 021 123 456

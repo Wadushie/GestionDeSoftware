@@ -1,0 +1,7 @@
+Lista de categoria
+---
+tags: 
+- "categoria"
+responses:
+  200:
+    description: Se obtiene la lista de categorias

@@ -1,0 +1,13 @@
+Obtener un proveedor
+---
+tags: 
+- "proveedor"
+responses:
+  200:
+    description: Se obtiene un proveedor
+  404:
+    description: No se encuentra el proveedor
+parameters:
+  - name: id
+    in: path
+    required: true

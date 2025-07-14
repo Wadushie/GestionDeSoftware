@@ -1,0 +1,7 @@
+Lista de proveedores
+---
+tags: 
+- "proveedor"
+responses:
+  200:
+    description: Se obtiene la lista de proveedores

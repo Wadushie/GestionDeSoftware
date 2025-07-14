@@ -1,0 +1,42 @@
+Lista de productos
+---
+tags:
+  - "search"
+responses:
+  200:
+    description: Se lista los productos filtrad0s
+parameters:
+  - in: query
+    name: page
+    description: Current items page
+    default: 1
+  - name: body
+    in: body
+    schema:
+      $ref: "#/definitions/ProductoSearch"
+definitions:
+    ProductoSearch:
+        type: "object"
+        properties:
+            id:
+                type: "int64"
+            proveedor_id:
+                type: "int64"
+            categoria_id:
+                type: "int64"
+            nombre:
+                type: "string"
+            descripcion:
+                type: "string"
+            precio:
+                type: "float64"
+            estado:
+                type: "string"
+        example:
+            id: 17
+            proveedor_id: 1
+            categoria_id: 1
+            nombre: Lorem ipsum dolor sit amet
+            descripcion: Lorem ipsum dolor sit amet
+            precio: 1.2
+            estado: Lorem ipsum

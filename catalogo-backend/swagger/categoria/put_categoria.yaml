@@ -1,0 +1,25 @@
+Actualiza una categoria
+---
+tags:
+- "categoria"
+responses:
+  200:
+    description: Se actualiza la categoria
+  404:
+    description: No se encuentra la categoria
+parameters:
+  - name: id
+    in: path
+    required: true
+  - name: body
+    in: body
+    schema:
+      $ref: "#/definitions/CategoriaPut"
+definitions:
+    CategoriaPut:
+        type: "object"
+        properties:
+            descripcion:
+                type: "string"
+        example:
+            descripcion: Categoria 1

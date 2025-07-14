@@ -1,0 +1,11 @@
+Borrar una categoria
+---
+tags: 
+- "categoria"
+responses:
+  200:
+    description: Se borra la categoria
+parameters:
+  - name: id
+    in: path
+    required: true

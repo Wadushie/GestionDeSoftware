@@ -1,0 +1,24 @@
+Crea una nueva categoria
+---
+tags:
+- "categoria"
+responses:
+  200:
+    description: Se crea la categoria
+  404:
+    description: Ya existe una categoria con el id
+  500:
+    description: Ocurrio un error al crear la categoria
+parameters:
+  - name: body
+    in: body
+    schema:
+      $ref: "#/definitions/CategoriaPost"
+definitions:
+    CategoriaPost:
+        type: "object"
+        properties:
+            descripcion:
+                type: "string"
+        example:
+            descripcion: Categoria 1

@@ -1,0 +1,42 @@
+Crea un nuevo producto
+---
+tags:
+- "producto"
+responses:
+  200:
+    description: Se crea el producto
+  404:
+    description: Ya existe un producto con el id
+  500:
+    description: Ocurrio un error al crear el producto
+parameters:
+  - name: body
+    in: body
+    schema:
+      $ref: "#/definitions/ProductoPost"
+definitions:
+    ProductoPost:
+        type: "object"
+        properties:
+            id:
+                type: "int64"
+            proveedor_id:
+                type: "int64"
+            categoria_id:
+                type: "int64"
+            nombre:
+                type: "string"
+            descripcion:
+                type: "string"
+            precio:
+                type: "float64"
+            estado:
+                type: "string"
+        example:
+            id: 17
+            proveedor_id: 1
+            categoria_id: 1
+            nombre: Lorem ipsum dolor sit amet
+            descripcion: Lorem ipsum dolor sit amet
+            precio: 1.2
+            estado: Lorem ipsum

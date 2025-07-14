@@ -1,0 +1,11 @@
+Borrar un proveedor
+---
+tags: 
+- "proveedor"
+responses:
+  200:
+    description: Se borra el proveedor
+parameters:
+  - name: id
+    in: path
+    required: true
